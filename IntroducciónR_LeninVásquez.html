@@ -1,0 +1,75 @@
+---
+title: "Deber R_LeninVasquez"
+author: "Lenin Vásquez"
+date: "26 de febrero de 2022"
+output:
+  html_document:
+     mathjax:local
+    self_contained: false
+    fig_height: 6
+    fight_width: 8
+    theme: journal
+    highlight: zenburn
+    toc: yes
+    toc_depht: 4
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+---
+
+```{r Setup,include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Tarea 1:
+## Ejercicio 1
+
+```{r Ejerc1}
+# Ejercicio 1:
+ciudad <- "Quito"
+print(ciudad)
+```
+
+## Ejercicio 2:
+
+
+```{r Ejerc2}
+# Ejercicio2:
+paises_andes <- c("Venezuela", "Colombia", "Ecuador", "Perú", "Bolivia", "Chile", "Argentina")
+print(paises_andes)
+```
+
+## Ejercicio 3:
+
+```{r Ejerc3}
+### Ejercicio3:
+Datostrabajadores = data.frame(numero_Trabajador = paste0("T", 1:12), Nombre = c("Andres", "Juan", "Pablo", "Maria", "Paula", "Andres", "Carolina", "Sebastian", "Pepe", "Ana", "Paul", "Doris"), Apellido = c("Andrade", "Vásquez", "Ortiz", "Calero", "Torres", "Vivanco", "Guerra", "Gomez", "Recalde", "Rodriguez", "Romo", "Gutierrez"), Salario = sample(100.50:425.00, 12, replace = TRUE), Horas_Extra =sample(10:20, 12, replace = TRUE) )
+Datostrabajadores
+```
+
+Datos_trabajadores = data.frame(num_Trabajador = paste0("Trb", 1:12), Nombre = c("Sebastian", "Anderson", "Rosa", "Mariana", "Paola", "María", "Ruth", "Mateo", "Antonella", "Teresa", "Juan", "Daniela"), Apellido = c("Neto", "Yumbo", "Briñoles", "Silva", "Calderón", "Minango", "Guevara", "Benalcazar", "Ortiz", "Vélez", "Villacrés", "Benavides"), Salario = sample(800.05:1200.75, 12, replace = TRUE), Num_Dias_vacaciones =sample(10:30, 12, replace = TRUE) )
+Datos_trabajadores
+```
+
+
+## Ejecicio 4:
+* Ejecicio 4.1:
+
+```{r Ejerc41}
+# Ejercicio 4.1:
+# Selección del dataset "DNase"
+?DNase
+print(head(DNase, 4))
+concentracion = subset(DNase, conc >= 0.1 & conc <= 0.2)
+print(concentracion)
+```
+* Ejercicio 4.2:
+
+
+```{r Ejerc42}
+# Ejercicio 4.2:
+# Selección del dataset "DNase"
+?DNase
+concentracion2 = subset(DNase, Run != 2 & conc > 0.2 & density <= 1.0)
+print(concentracion2)
+```
